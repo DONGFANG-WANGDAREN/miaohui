@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.activity.loginorres.ForgetpasswordActivity">
+
+   <android.support.v7.widget.Toolbar
+       android:id="@+id/toolbar"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:paddingTop="@dimen/padding_top"
+       android:background="@color/toolbarcolor"
+       app:theme="@style/AppTheme.Base.Fanhui"/>
+
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:paddingLeft="18dp"
+       android:paddingRight="18dp"
+       android:orientation="vertical">
+
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:orientation="horizontal"
+          android:layout_marginTop="50dp">
+
+         <TextView
+             android:id="@+id/ed_phone"
+             android:layout_width="0dp"
+             android:layout_weight="1"
+             android:layout_height="wrap_content"
+             android:textColor="#666666"
+             android:background="@null"
+             android:textSize="14sp"
+             android:inputType="phone"/>
+         <TextView
+             android:layout_width="1dp"
+             android:layout_height="wrap_content"
+             android:layout_marginLeft="25dp"
+             android:layout_marginRight="25dp"
+             android:background="@mipmap/xian_shu"/>
+         <TextView
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:text="发送验证码"/>
+      </LinearLayout>
+
+      <TextView
+          android:layout_width="match_parent"
+          android:layout_height="1dp"
+          android:background="#cccccc"
+          android:layout_marginTop="10dp"
+          android:layout_marginBottom="30dp"/>
+      <EditText
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:hint="请输入你的密码"
+          android:textSize="14sp"
+          android:textColor="#666666"
+          android:inputType="phone"
+          android:background="@null"/>
+
+      <TextView
+          android:layout_width="match_parent"
+          android:layout_height="1dp"
+          android:background="#cccccc"
+          android:layout_marginTop="10dp"/>
+      
+
+      <Button
+          android:id="@+id/btn_next"
+          android:layout_width="200dp"
+          android:layout_height="40dp"
+          android:layout_gravity="center"
+          android:layout_marginTop="45dp"
+          android:text="下一步"
+          android:textColor="@color/abc_white"
+          android:background="@mipmap/btn_background"/>
+
+   </LinearLayout>
+
+
+
+
+
+</LinearLayout>

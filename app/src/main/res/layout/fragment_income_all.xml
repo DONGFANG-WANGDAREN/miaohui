@@ -1,0 +1,19 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:tools="http://schemas.android.com/tools"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             xmlns:app="http://schemas.android.com/apk/res-auto"
+             tools:context="com.dingzhi.miaohui.ui.fragment.qianbao.IncomeAllFragment">
+
+    <com.jude.easyrecyclerview.EasyRecyclerView
+        android:id="@+id/recycle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:scrollbars="none"
+        android:paddingLeft="18dp"
+        android:paddingRight="18dp"
+        app:layout_progress="@layout/view_progress">
+
+    </com.jude.easyrecyclerview.EasyRecyclerView>
+
+</FrameLayout>

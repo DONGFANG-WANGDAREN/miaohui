@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/layoutContent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.dingzhi.miaohui.ui.activity.myinfo.qianbao.UdateOrFindPayActivity">
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/padding_top"
+        android:background="@color/toolbarcolor"
+        app:theme="@style/AppTheme.Base.Fanhui"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingRight="18dp"
+        android:orientation="vertical"
+        android:layout_marginTop="20dp"
+        android:paddingLeft="18dp">
+        <TextView
+            android:id="@+id/tv_update"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="修改支付密码"
+            android:drawableRight="@mipmap/icon_fanhui"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp"
+            android:background="#ebebeb"/>
+        <TextView
+            android:id="@+id/tv_find"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="找回支付密码"
+            android:drawableRight="@mipmap/icon_fanhui"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp"
+            android:background="#ebebeb"/>
+
+    </LinearLayout>
+
+</LinearLayout>

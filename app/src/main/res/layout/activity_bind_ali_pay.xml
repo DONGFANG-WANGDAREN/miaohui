@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.dingzhi.miaohui.ui.activity.myinfo.qianbao.BindAliPayActivity">
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/padding_top"
+        android:background="@color/toolbarcolor"
+        app:theme="@style/AppTheme.Base.Fanhui"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="18dp"
+        android:orientation="vertical"
+        android:paddingRight="18dp">
+        <EditText
+            android:id="@+id/ed_name"
+            android:layout_width="match_parent"
+            android:layout_height="34dp"
+            android:layout_marginTop="30dp"
+            android:textColorHint="#cccccc"
+            android:textSize="14sp"
+            android:textColor="#666666"
+            android:hint="请输入要绑定支付宝用户姓名"
+            android:background="@mipmap/ed_kuang2"/>
+        <EditText
+            android:id="@+id/ed_account"
+            android:layout_width="match_parent"
+            android:layout_height="34dp"
+            android:layout_marginTop="30dp"
+            android:textSize="14sp"
+            android:textColor="#666666"
+            android:textColorHint="#cccccc"
+            android:hint="请输入要绑定支付宝账号"
+            android:background="@mipmap/ed_kuang2"/>
+        <Button
+            android:id="@+id/btn_sure"
+            android:layout_width="200dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="50dp"
+            android:layout_gravity="center"
+            android:background="@mipmap/btn_background"
+            android:text="确定"/>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="toolbarcolor">#FF596E</color>
+    <color name="abc_theme_black_7f">#7f000000</color>
+    <color name="abc_tab_text_normal">#212121</color>
+    <color name="abc_white">#ffffff</color>
+    <color name="hui">#cccccc</color>
+    <color name="black">#000000</color>
+    <color name="transparent">#0000</color>
+
+</resources>

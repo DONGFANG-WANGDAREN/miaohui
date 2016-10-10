@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.dingzhi.miaohui.ui.activity.editdata.AccountActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true"
+        android:paddingTop="@dimen/padding_top"
+        android:background="@color/toolbarcolor"
+        app:theme="@style/AppTheme.Base.Fanhui"/>
+
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:orientation="vertical"
+       android:paddingLeft="18dp"
+       android:paddingRight="18dp">
+<RelativeLayout
+    android:layout_marginTop="20dp"
+    android:id="@+id/lay_name"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="姓名"
+        android:textSize="14sp"
+        android:textColor="#808080"
+        android:layout_alignParentLeft="true"/>
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ssss"
+        android:textSize="14sp"
+        android:textColor="#666666"
+        android:layout_alignParentRight="true"
+        android:drawableRight="@mipmap/icon_fanhui"/>
+
+</RelativeLayout>
+       <TextView
+           android:layout_marginTop="15dp"
+           android:layout_marginBottom="15dp"
+           android:layout_width="match_parent"
+           android:layout_height="1dp"
+           android:background="#ebebeb"/>
+       <RelativeLayout
+           android:id="@+id/lay_birthday"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content">
+
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="生日"
+               android:textSize="14sp"
+               android:textColor="#808080"
+               android:layout_alignParentLeft="true"/>
+           <TextView
+               android:id="@+id/tv_birthday"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="15/08/1997"
+               android:textSize="14sp"
+               android:textColor="#666666"
+               android:layout_alignParentRight="true"
+               android:drawableRight="@mipmap/icon_fanhui"/>
+
+       </RelativeLayout>
+       <TextView
+           android:layout_marginTop="15dp"
+           android:layout_marginBottom="15dp"
+           android:layout_width="match_parent"
+           android:layout_height="1dp"
+           android:background="#ebebeb"/>
+       <RelativeLayout
+           android:id="@+id/lay_phone"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content">
+
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="手机号码"
+               android:textSize="14sp"
+               android:textColor="#808080"
+               android:layout_alignParentLeft="true"/>
+           <TextView
+               android:id="@+id/tv_phone"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="15879107475"
+               android:textSize="14sp"
+               android:textColor="#666666"
+               android:layout_alignParentRight="true"
+               android:drawableRight="@mipmap/icon_fanhui"/>
+
+       </RelativeLayout>
+       <TextView
+           android:layout_marginTop="15dp"
+           android:layout_marginBottom="15dp"
+           android:layout_width="match_parent"
+           android:layout_height="1dp"
+           android:background="#ebebeb"/>
+
+           <TextView
+               android:id="@+id/tv_modify"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:text="修改密码"
+               android:textSize="14sp"
+               android:drawableRight="@mipmap/icon_fanhui"
+               android:textColor="#808080"
+               android:layout_alignParentLeft="true"/>
+
+       <TextView
+           android:layout_marginTop="15dp"
+           android:layout_marginBottom="15dp"
+           android:layout_width="match_parent"
+           android:layout_height="1dp"
+           android:background="#ebebeb"/>
+
+
+   </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,55 @@
+package com.dingzhi.miaohui.viewholder;
+
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.TextView;
+
+import com.dingzhi.miaohui.R;
+import com.dingzhi.miaohui.enity.IncomeEnity;
+import com.jude.easyrecyclerview.adapter.BaseViewHolder;
+
+/**
+ * Created by SRDZ on 2016/9/8.
+ */
+public class InComeViewHolder extends BaseViewHolder<IncomeEnity> {
+    private TextView tv_type,tv_huodong,tv_money,tv_date;
+   
+    public InComeViewHolder(ViewGroup parent) {
+        super(parent, R.layout.item_income);
+        tv_type = $(R.id.tv_type);
+        tv_huodong = $(R.id.tv_huodong);
+        tv_money = $(R.id.tv_money);
+        tv_date = $(R.id.tv_date);
+    }
+
+    @Override
+    public void setData(IncomeEnity data) {
+        super.setData(data);
+        switch (data.getType()){
+            case 1:
+                tv_type.setText("收入:");
+                tv_money.setText("+"+data.getMoney());
+                tv_huodong.setVisibility(View.VISIBLE);
+                tv_huodong.setText(data.getHuodong());
+                break;
+            case 2:
+                tv_type.setText("支出:");
+                tv_money.setText("-"+data.getMoney());
+                tv_huodong.setVisibility(View.VISIBLE);
+                tv_huodong.setText(data.getHuodong());
+                break;
+            case 3:
+                tv_type.setText("退款:");
+                tv_money.setText("+"+data.getMoney());
+                tv_huodong.setVisibility(View.VISIBLE);
+                tv_huodong.setText(data.getHuodong());
+                break;
+            case 4:
+                tv_type.setText("提现余额:");
+                tv_huodong.setVisibility(View.GONE);
+                tv_money.setText("-"+data.getMoney());
+                break;
+        }
+        tv_date.setText(data.getDate());
+    }
+}

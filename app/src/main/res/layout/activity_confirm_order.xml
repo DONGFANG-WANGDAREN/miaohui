@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.dingzhi.miaohui.ui.activity.ConfirmOrderActivity">
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/padding_top"
+        android:background="@color/toolbarcolor"
+        app:theme="@style/AppTheme.Base.Fanhui"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingRight="18dp"
+        android:paddingLeft="18dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_marginTop="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#666666"
+            android:textSize="14sp"
+            android:text="出租时间"/>
+        <TextView
+            android:layout_width="54dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="10dp"
+            android:background="#b3b3b3"/>
+
+        <com.dingzhi.miaohui.widget.ExpandableHeightGridView
+            android:id="@+id/grid_time"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:horizontalSpacing="5dp"
+            android:verticalSpacing="5dp"
+            android:numColumns="4"/>
+        <TextView
+            android:layout_marginTop="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#666666"
+            android:textSize="14sp"
+            android:text="活动内容"/>
+        <TextView
+            android:layout_width="54dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="10dp"
+            android:background="#b3b3b3"/>
+        <RadioGroup
+            android:layout_marginTop="15dp"
+            android:id="@+id/radio_skill"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RadioButton
+                android:id="@+id/radio_online"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#666666"
+                android:textSize="14sp"
+                android:checked="true"
+                android:button="@null"
+                android:drawableRight="@drawable/radiobutton_selector_red"
+                android:text="线上"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="15dp"
+                android:background="#e3e3e3"/>
+            <RadioButton
+                android:id="@+id/radio_theline"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#666666"
+                android:textSize="14sp"
+                android:button="@null"
+                android:drawableRight="@drawable/radiobutton_selector_red"
+                android:text="线下"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="15dp"
+                android:background="#e3e3e3"/>
+        </RadioGroup>
+
+        <com.dingzhi.miaohui.widget.ExpandableHeightGridView
+            android:id="@+id/grid_skill"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:horizontalSpacing="5dp"
+            android:verticalSpacing="5dp"
+            android:numColumns="4"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#666666"
+                android:textSize="14sp"
+                android:text="金额:"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#ff596e"
+                android:layout_marginLeft="5dp"
+                android:textSize="14sp"
+                android:text="￥100"/>
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_sure"
+            android:layout_width="200dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="45dp"
+            android:background="@mipmap/btn_background"
+            android:textSize="16dp"
+            android:layout_gravity="center"
+            android:text="提交付款"/>
+
+
+
+    </LinearLayout>
+</LinearLayout>

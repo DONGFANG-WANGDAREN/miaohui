@@ -1,0 +1,90 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none"
+            tools:context=".ui.fragment.MyFragment">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/iv_banner"
+            android:layout_width="match_parent"
+            android:layout_height="270dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:background="@mipmap/my_top"/>
+
+            <ImageView
+                android:id="@+id/img_head"
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="146dp"/>
+
+            <TextView
+                android:id="@+id/tv_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/img_head"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="5dp"
+                android:text="美少女战士"
+                android:textColor="#666666"
+                android:textSize="12sp"/>
+
+            <LinearLayout
+                android:id="@+id/lay_edit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_name"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="5dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="编辑资料"
+                    android:textColor="#999999"
+                    android:textSize="10sp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:text="ID:"
+                    android:textColor="#999999"
+                    android:textSize="10sp"/>
+
+                <TextView
+                    android:id="@+id/tv_id"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="10001"
+                    android:textColor="#999999"
+                    android:textSize="10sp"/>
+            </LinearLayout>
+        </RelativeLayout>
+
+
+
+            <com.dingzhi.miaohui.widget.NoScrollListview
+                android:id="@+id/lv_my"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="18dp"
+                android:layout_marginRight="18dp"/>
+
+    </LinearLayout>
+</ScrollView>
+
+
+
+
+
