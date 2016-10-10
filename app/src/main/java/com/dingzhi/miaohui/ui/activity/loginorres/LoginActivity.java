@@ -1,7 +1,6 @@
 package com.dingzhi.miaohui.ui.activity.loginorres;
 
 import android.content.Intent;
-import android.os.Bundle;
 import android.support.design.widget.TextInputLayout;
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -14,10 +13,8 @@ import com.dingzhi.miaohui.BaseActivity;
 import com.dingzhi.miaohui.R;
 import com.dingzhi.miaohui.ui.activity.MainActivity;
 import com.dingzhi.miaohui.util.ExpressionUtil;
-import com.dingzhi.miaohui.util.SystemBarTintManager;
 
 import butterknife.BindView;
-import butterknife.ButterKnife;
 import butterknife.OnClick;
 
 public class LoginActivity extends BaseActivity  {
