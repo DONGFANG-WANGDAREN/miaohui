@@ -25,7 +25,12 @@ import com.jude.easyrecyclerview.decoration.DividerDecoration;
 import butterknife.BindView;
 
 /**
- * A simple {@link Fragment} subclass.
+ * 文件名：MybaotaFragment.
+ * 版权所有：SRDZ
+ * 创建人：TANXIN
+ * 创建日期:2016/10/13 16:55.
+ * 功能描述: 我报价了他
+ * 函数/方法说明:
  */
 public class MybaotaFragment extends BaseFragment implements SwipeRefreshLayout.OnRefreshListener, RecyclerArrayAdapter.OnLoadMoreListener {
 
@@ -44,6 +49,17 @@ public class MybaotaFragment extends BaseFragment implements SwipeRefreshLayout.
 
     @Override
     protected void initView() {
+        initRecycle();
+    }
+    /**
+     * 函数名： initRcycle
+     * 创建人： TanXin.
+     * 创建日期： 2016/10/13 16:21.
+     * 功能描述：初始化EasyRecycleView
+     * 参考文档：https://github.com/Jude95/EasyRecyclerView
+     * 附加说明：第三方开源库，上拉下拉RecycleView ,initRcycle内方法参考IncomeAllFragment
+     */
+    private void initRecycle() {
         recycle.setLayoutManager(new LinearLayoutManager(getActivity()));
         DividerDecoration itemDecoration = new DividerDecoration(Color.parseColor("#b3b3b3"), ScreenUtil.dip2px(getActivity(), 0.5f), ScreenUtil.dip2px(getActivity(), 0), 0);
         itemDecoration.setDrawLastItem(false);
@@ -99,9 +115,13 @@ public class MybaotaFragment extends BaseFragment implements SwipeRefreshLayout.
         });
         recycle.setRefreshListener(this);
         onRefresh();
-
     }
-
+    /**
+     * 函数名： onLoadMore
+     * 创建人： TanXin.
+     * 创建日期： 2016/10/13 16:30.
+     * 功能描述：加载更多
+     */
 
     @Override
     public void onLoadMore() {
@@ -120,7 +140,12 @@ public class MybaotaFragment extends BaseFragment implements SwipeRefreshLayout.
             }
         }, 1000);
     }
-
+    /**
+     * 函数名： onRefresh
+     * 创建人： TanXin.
+     * 创建日期： 2016/10/13 16:30.
+     * 功能描述：下拉刷新
+     */
     @Override
     public void onRefresh() {
         hasNetWork = NetUtil.isConnected(getActivity());

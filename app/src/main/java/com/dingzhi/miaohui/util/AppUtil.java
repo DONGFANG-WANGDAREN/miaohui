@@ -5,18 +5,24 @@ import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.content.pm.PackageManager.NameNotFoundException;
 
-
+/**
+ * 文件名：AppUtil.
+ * 版权所有：SRDZ
+ * 创建人：TANXIN
+ * 创建日期:2016/10/13 17:06.
+ * 功能描述: APP相关
+ * 函数/方法说明:
+ */
 public class AppUtil {
 
-	/**
-	 * [获取应用程序名称]
-	 * @param context
-	 * @return 当前应用程序名称
-	 */
+	 /**
+	   * 函数名： AppName
+	   * 创建人： TanXin.
+	   * 创建日期： 2016/10/13 17:06.
+	   * 功能描述：获取应用程序名称
+	   */
 	public static String AppName(Context context){
-		
-		try
-		{
+		try{
 			PackageManager packageManager = context.getPackageManager();
 			PackageInfo packageInfo = packageManager.getPackageInfo(
 					context.getPackageName(), 0);
@@ -29,18 +35,15 @@ public class AppUtil {
 		return null;
 		
 	}
-	
-	/**
-	 * 
-	 * [获取应用程序版本名称信息]
-	 * @param context
-	 * @return  当前应用的版本名称
-	 */
-	
+
+	 /**
+	   * 函数名： getVersionName
+	   * 创建人： TanXin.
+	   * 创建日期： 2016/10/13 17:07.
+	   * 功能描述：当前应用的版本号*/
 	public static String getVersionName(Context context)
 	{
-		try
-		{
+		try{
 			PackageManager packageManager = context.getPackageManager();
 			PackageInfo packageInfo = packageManager.getPackageInfo(
 					context.getPackageName(), 0);

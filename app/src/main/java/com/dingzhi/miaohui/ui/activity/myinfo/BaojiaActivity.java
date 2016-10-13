@@ -18,7 +18,14 @@ import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
-
+/**
+ * 文件名：BaojiaActivity.
+ * 版权所有：SRDZ
+ * 创建人：TANXIN
+ * 创建日期:2016/10/13 16:03.
+ * 功能描述: 报价
+ * 函数/方法说明:
+ */
 public class BaojiaActivity extends BaseActivity {
     @BindView(R.id.toolbar)
     Toolbar toolbar;
@@ -43,8 +50,8 @@ public class BaojiaActivity extends BaseActivity {
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         fragments = new ArrayList<>();
-        mybaotaFragment = new MybaotaFragment();
-        tabaowoFragment = new TabaowoFragment();
+        mybaotaFragment = new MybaotaFragment();    //我对TA报价
+        tabaowoFragment = new TabaowoFragment();    //TA对我报价
         fragments.add(mybaotaFragment);
         fragments.add(tabaowoFragment);
         adapter = new TabPagerAdapter(getSupportFragmentManager());
@@ -56,7 +63,7 @@ public class BaojiaActivity extends BaseActivity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
-            case android.R.id.home:
+            case android.R.id.home: //返回
                 finish();
                 break;
         }

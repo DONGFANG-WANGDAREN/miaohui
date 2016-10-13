@@ -13,7 +13,13 @@ import com.dingzhi.miaohui.widget.DragSelectRecyclerViewAdapter;
 import java.util.List;
 
 /**
- * Created by SRDZ on 2016/9/13.
+ * 文件名：SkillAdapter.
+ * 版权所有：SRDZ
+ * 创建人：TANXIN
+ * 创建日期:2016/10/13 17:25.
+ * 功能描述: 技能服务 Adapter
+ * 参考资料：https://github.com/afollestad/drag-select-recyclerview
+ * 函数/方法说明:
  */
 public class SkillAdapter extends DragSelectRecyclerViewAdapter<SkillAdapter.SkillViewHolder> {
 

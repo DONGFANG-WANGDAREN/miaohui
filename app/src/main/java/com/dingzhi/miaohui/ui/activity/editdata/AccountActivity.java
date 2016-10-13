@@ -19,10 +19,12 @@ import butterknife.ButterKnife;
 import butterknife.OnClick;
 
 /**
- * Description:账户信息 <br>
- *
- * @auther TX <br>
- * created at 2016/9/5 15:43
+ * 文件名：AccountActivity.
+ * 版权所有：SRDZ
+ * 创建人：TANXIN
+ * 创建日期:2016/10/13 15:15.
+ * 功能描述: 账户信息界面
+ * 函数/方法说明:
  */
 public class AccountActivity extends BaseActivity implements View.OnClickListener {
 
@@ -62,6 +64,12 @@ public class AccountActivity extends BaseActivity implements View.OnClickListene
     }
 
 
+    /**
+     * 函数名：  onOptionsItemSelected
+     * 创建人： TanXin.
+     * 创建日期： 2016/10/13 14:55.
+     * 功能描述：toolbar返回键并将昵称手机号回调至编辑页面
+     */
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
@@ -83,7 +91,12 @@ public class AccountActivity extends BaseActivity implements View.OnClickListene
         return true;
     }
 
-
+ /**
+   * 函数名：onActivityResult
+   * 创建人： TanXin.
+   * 创建日期： 2016/10/13 15:18.
+   * 功能描述：返回的昵称 手机号回调
+   */
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         switch (requestCode) {
@@ -103,21 +116,21 @@ public class AccountActivity extends BaseActivity implements View.OnClickListene
     @OnClick({R.id.lay_name, R.id.lay_birthday, R.id.lay_phone, R.id.tv_modify})
     public void onClick(View view) {
         switch (view.getId()) {
-            case R.id.lay_name:
+            case R.id.lay_name: //跳转至设置界面返回数据
                 Intent intent = new Intent(this, WeiXinActivity.class);
                 intent.putExtra("tv", tvName.getText().toString().trim());
                 intent.putExtra("title", "昵称");
                 startActivityForResult(intent, C.REQUEST_CODE_NAME);
                 break;
-            case R.id.lay_birthday:
+            case R.id.lay_birthday: //开启时间对话框
                 DialogUtil.showDialogDate(tvBirthday, this);
                 break;
-            case R.id.lay_phone:
+            case R.id.lay_phone: //跳转至验证手机界面
                 Intent intent1 = new Intent(this, VerificationActivity.class);
                 intent1.putExtra("phone", "15879107475");
                 startActivityForResult(intent1, C.REQUEST_CODE_YANZHENPHONE);
                 break;
-            case R.id.tv_modify:
+            case R.id.tv_modify: //跳转至修改密码
                 startActivity(new Intent(this, ModifyActivity.class));
                 break;
         }

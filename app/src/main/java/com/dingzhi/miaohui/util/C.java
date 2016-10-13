@@ -1,10 +1,15 @@
 package com.dingzhi.miaohui.util;
 
 /**
- * Created by SRDZ on 2016/9/5.
+ * 文件名：C.
+ * 版权所有：SRDZ
+ * 创建人：TANXIN
+ * 创建日期:2016/10/13 17:08.
+ * 功能描述: 常量
+ * 函数/方法说明:
  */
 public class C {
-    public static final String FILE_NAME = "miaohui";
+    public static final String FILE_NAME = "miaohui"; //应用名称
     public static final int REQUEST_CODE_WEIXIN = 1;
     public static final int REQUEST_CODE_NAME = 3;
     public static final int REQUEST_CODE_SIGNATURE = 2;

@@ -16,6 +16,14 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
+/**
+ * 文件名：SetPhoneActivity.
+ * 版权所有：SRDZ
+ * 创建人：TANXIN
+ * 创建日期:2016/10/13 15:42.
+ * 功能描述: 设置手机
+ * 函数/方法说明:
+ */
 public class SetPhoneActivity extends BaseActivity {
     @BindView(R.id.toolbar)
     Toolbar toolbar;
@@ -41,7 +49,7 @@ public class SetPhoneActivity extends BaseActivity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
-            case android.R.id.home:
+            case android.R.id.home: //返回
                 finish();
                 break;
         }
@@ -52,6 +60,7 @@ public class SetPhoneActivity extends BaseActivity {
 
     @OnClick(R.id.btn_sure)
     public void onClick() {
+        //手机号回调
         String tv_phone = edPhone.getText().toString().trim();
         if (tv_phone.isEmpty()) {
             Toast.makeText(this, "请输入手机号", Toast.LENGTH_SHORT).show();

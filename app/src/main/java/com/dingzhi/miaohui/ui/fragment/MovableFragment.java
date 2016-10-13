@@ -24,7 +24,14 @@ import com.jude.easyrecyclerview.adapter.BaseViewHolder;
 import com.jude.easyrecyclerview.adapter.RecyclerArrayAdapter;
 import com.jude.easyrecyclerview.decoration.DividerDecoration;
 
-
+/**
+ * 文件名：MovableFragment.
+ * 版权所有：SRDZ
+ * 创建人：TANXIN
+ * 创建日期:2016/10/13 16:54.
+ * 功能描述: 活动
+ * 函数/方法说明:
+ */
 public class MovableFragment extends Fragment implements SwipeRefreshLayout.OnRefreshListener,RecyclerArrayAdapter.OnLoadMoreListener{
 
     private Toolbar toolbar;
@@ -50,11 +57,17 @@ public class MovableFragment extends Fragment implements SwipeRefreshLayout.OnRe
         ((AppCompatActivity) getActivity()).setSupportActionBar(toolbar);
     }
 
+    /**
+     * 函数名： initRcycle
+     * 创建人： TanXin.
+     * 创建日期： 2016/10/13 16:21.
+     * 功能描述：初始化EasyRecycleView
+     * 参考文档：https://github.com/Jude95/EasyRecyclerView
+     * 附加说明：第三方开源库，上拉下拉RecycleView ,initRcycle内方法参考IncomeAllFragment
+     */
     private void initRecycle() {
         recycle.setLayoutManager(new LinearLayoutManager(getActivity()));
-
         recycle.setRefreshingColorResources(R.color.toolbarcolor);
-
         recycle.setAdapterWithProgress(adapter = new RecyclerArrayAdapter(getActivity()) {
             @Override
             public BaseViewHolder OnCreateViewHolder(ViewGroup parent, int viewType) {
@@ -106,7 +119,12 @@ public class MovableFragment extends Fragment implements SwipeRefreshLayout.OnRe
     }
 
 
-
+    /**
+     * 函数名： onLoadMore
+     * 创建人： TanXin.
+     * 创建日期： 2016/10/13 16:30.
+     * 功能描述：加载更多
+     */
     @Override
     public void onLoadMore() {
         hasNetWork = NetUtil.isConnected(getActivity());
@@ -124,6 +142,12 @@ public class MovableFragment extends Fragment implements SwipeRefreshLayout.OnRe
         }, 2000);
     }
 
+    /**
+     * 函数名： onRefresh
+     * 创建人： TanXin.
+     * 创建日期： 2016/10/13 16:30.
+     * 功能描述：下拉刷新
+     */
     @Override
     public void onRefresh() {
         hasNetWork = NetUtil.isConnected(getActivity());

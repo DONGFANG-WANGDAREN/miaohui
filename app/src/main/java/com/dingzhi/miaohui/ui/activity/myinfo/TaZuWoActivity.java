@@ -19,6 +19,14 @@ import java.util.List;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
+/**
+ * 文件名：TaZuWoActivity.
+ * 版权所有：SRDZ
+ * 创建人：TANXIN
+ * 创建日期:2016/10/13 16:11.
+ * 功能描述: TA租了我
+ * 函数/方法说明:
+ */
 public class TaZuWoActivity extends BaseActivity {
     @BindView(R.id.toolbar)
     Toolbar toolbar;
@@ -59,7 +67,7 @@ public class TaZuWoActivity extends BaseActivity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
-            case android.R.id.home:
+            case android.R.id.home: //返回
                 finish();
                 break;
         }

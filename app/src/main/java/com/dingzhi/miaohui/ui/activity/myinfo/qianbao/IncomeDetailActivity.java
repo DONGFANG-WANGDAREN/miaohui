@@ -17,6 +17,14 @@ import com.dingzhi.miaohui.widget.UnderLineLinearLayout;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
+/**
+ * 文件名：IncomeDetailActivity.
+ * 版权所有：SRDZ
+ * 创建人：TANXIN
+ * 创建日期:2016/10/13 15:49.
+ * 功能描述: 收支详情
+ * 函数/方法说明:
+ */
 public class IncomeDetailActivity extends BaseActivity {
 
     @BindView(R.id.toolbar)

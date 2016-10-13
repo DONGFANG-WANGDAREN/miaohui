@@ -7,9 +7,16 @@ import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.dingzhi.miaohui.R;
 
-public class GlideUtils
+/**
+ * 文件名：GlideUtils.
+ * 版权所有：SRDZ
+ * 创建人：TANXIN
+ * 创建日期:2016/10/13 17:01.
+ * 功能描述: GlideUtils
+ * 函数/方法说明:
+ */
+public class GlideUtils{
 
-{
 	public static GlideUtils instance;
 
 	public static GlideUtils getInstance() {
@@ -26,7 +33,6 @@ public class GlideUtils
 
 	/**
 	 * 联网加载普通imageview
-	 * 
 	 * @param context
 	 * @param imgUrl
 	 * @param imageView
@@ -61,19 +67,18 @@ public class GlideUtils
 				.transform(new GlideCircleTransform(context)).crossFade().into(imageView);
 	}
 
-//	/***
-//	 * 加载圆角imageview(网络)
-//	 * 
-//	 * @param context
-//	 * @param imgUrl
-//	 * @param imageView
-//	 */
-//	public void loadCornerImageView(Context context, String imgUrl, ImageView imageView) {
-//
-//		Glide.with(context).load(imgUrl).diskCacheStrategy(DiskCacheStrategy.ALL)
-//				.transform(new GlideRoundTransform(context, 8)).into(imageView);
-//
-//	}
+	/***
+	 * 加载圆角imageview(网络)
+	 *
+	 * @param context
+	 * @param imgUrl
+	 * @param imageView
+	 */
+	public void loadCornerImageView(Context context, String imgUrl, ImageView imageView) {
+
+		Glide.with(context).load(imgUrl).diskCacheStrategy(DiskCacheStrategy.ALL).
+				transform(new GlideCircleTransform(context)).into(imageView);
+	}
 
 	/***
 	 * 加载圆行imageview（本地）

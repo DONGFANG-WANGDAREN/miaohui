@@ -21,9 +21,15 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
+ /**
+  * 文件名：MyInfoNameActivity.
+  * 版权所有：SRDZ
+  * 创建人：TANXIN
+  * 创建日期:2016/10/13 15:00.
+  * 功能描述: 注册—个人信息
+  * 函数/方法说明:
+  */
 public class MyInfoNameActivity extends BaseActivity implements View.OnClickListener {
-
-
     @BindView(R.id.toolbar)
     Toolbar toolbar;
     @BindView(R.id.ed_name)
@@ -47,6 +53,13 @@ public class MyInfoNameActivity extends BaseActivity implements View.OnClickList
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
 
+
+     /**
+      * 函数名：  onOptionsItemSelected
+      * 创建人： TanXin.
+      * 创建日期： 2016/10/13 14:55.
+      * 功能描述：toolbar返回键
+      */
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
@@ -57,6 +70,13 @@ public class MyInfoNameActivity extends BaseActivity implements View.OnClickList
         return true;
     }
 
+      /**
+        * 函数名： showDialogSex
+        * 创建人： TanXin.
+        * 创建日期： 2016/10/13 15:01.
+        * 功能描述：打开选择新别参数框
+        * 参数列表：TextView tvSex
+        */
     private void showDialogSex(final TextView timeText) {
         String[] sexs = {"男", "女"};
         AlertDialog.Builder builder = new AlertDialog.Builder(MyInfoNameActivity.this,R.style.MyDialog);
@@ -90,13 +110,13 @@ public class MyInfoNameActivity extends BaseActivity implements View.OnClickList
     @OnClick({R.id.tv_date, R.id.tv_sex, R.id.btn_next})
     public void onClick(View view) {
         switch (view.getId()) {
-            case R.id.tv_date:
+            case R.id.tv_date:  //打开选择日期对话框
                 DialogUtil.showDialogDate(tvDate, this);
                 break;
-            case R.id.tv_sex:
+            case R.id.tv_sex:   //打开选择性别对话框
                 showDialogSex(tvSex);
                 break;
-            case R.id.btn_next:
+            case R.id.btn_next: //下一步——跳转至上传头像
                 String name = edName.getText().toString().trim();
                 String date = tvDate.getText().toString().trim();
 

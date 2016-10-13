@@ -8,7 +8,12 @@ import android.view.ViewGroup;
 import java.util.List;
 
 /**
- * Created by SRDZ on 2016/9/8.
+ * 文件名：TabPagerAdapter.
+ * 版权所有：SRDZ
+ * 创建人：TANXIN
+ * 创建日期:2016/10/13 17:23.
+ * 功能描述: TabLayout Adapter
+ * 函数/方法说明:
  */
 public class TabPagerAdapter extends FragmentStatePagerAdapter {
     private String[] titles;

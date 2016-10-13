@@ -14,6 +14,14 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
+/**
+ * 文件名：RegisteredActivity.
+ * 版权所有：SRDZ
+ * 创建人：TANXIN
+ * 创建日期:2016/10/13 15:05.
+ * 功能描述: 注册
+ * 函数/方法说明:
+ */
 public class RegisteredActivity extends BaseActivity  {
     @BindView(R.id.toolbar)
     Toolbar toolbar;
@@ -31,6 +39,13 @@ public class RegisteredActivity extends BaseActivity  {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
 
+
+    /**
+     * 函数名：  onOptionsItemSelected
+     * 创建人： TanXin.
+     * 创建日期： 2016/10/13 14:55.
+     * 功能描述：toolbar返回键
+     */
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
@@ -44,6 +59,7 @@ public class RegisteredActivity extends BaseActivity  {
 
     @OnClick(R.id.btn_next)
     public void onClick() {
+        //跳转至我的信息界面
         startActivity(new Intent(this, MyInfoNameActivity.class));
     }
 }

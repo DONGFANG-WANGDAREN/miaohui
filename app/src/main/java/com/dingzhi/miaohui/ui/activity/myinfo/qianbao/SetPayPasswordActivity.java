@@ -19,10 +19,12 @@ import butterknife.BindView;
 import butterknife.OnClick;
 
 /**
- * Description:设置支付密码 <br>
- *
- * @auther TX <br>
- * created at 2016/9/12 13:51
+ * 文件名：SetPayPasswordActivity.
+ * 版权所有：SRDZ
+ * 创建人：TANXIN
+ * 创建日期:2016/10/13 15:50.
+ * 功能描述: 设置支付密码
+ * 函数/方法说明:
  */
 public class SetPayPasswordActivity extends BaseActivity {
 
@@ -61,7 +63,13 @@ public class SetPayPasswordActivity extends BaseActivity {
         }
     }
 
-
+ /**
+   * 函数名： FirstPassword
+   * 创建人： TanXin.
+   * 创建日期： 2016/10/13 15:51.
+   * 功能描述：第一次调起支付键盘：
+   * 参考文档：https://github.com/zuiwuyuan/WeChatPswKeyboard
+   */
     private void FirstPassword(){
         //第一次输入的密码
         PopEnterPassword popEnterPassword = new PopEnterPassword(this,"请输入密码");
@@ -78,6 +86,13 @@ public class SetPayPasswordActivity extends BaseActivity {
         });
     }
 
+     /**
+       * 函数名： SecondPassword
+       * 创建人： TanXin.
+       * 创建日期： 2016/10/13 15:52.
+       * 功能描述：第一次调起支付键盘：
+       * 参考文档：https://github.com/zuiwuyuan/WeChatPswKeyboard
+       */
     private void SecondPassword(final String firstpassword){
         //第二次输入的密码
         PopEnterPassword popEnterPassword = new PopEnterPassword(this,"请再次确认密码");
@@ -103,7 +118,7 @@ public class SetPayPasswordActivity extends BaseActivity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()){
-            case android.R.id.home:
+            case android.R.id.home: //返回
                 finish();
                 break;
         }

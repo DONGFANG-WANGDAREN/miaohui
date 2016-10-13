@@ -16,7 +16,12 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 
 /**
- * Created by SRDZ on 2016/9/19.
+ * 文件名：PersonInfoAdapter.
+ * 版权所有：SRDZ
+ * 创建人：TANXIN
+ * 创建日期:2016/10/13 17:33.
+ * 功能描述: 个人详情 我的信息 listview adapter
+ * 函数/方法说明:
  */
 public class PersonInfoAdapter extends BaseAdapter {
     private Context context;

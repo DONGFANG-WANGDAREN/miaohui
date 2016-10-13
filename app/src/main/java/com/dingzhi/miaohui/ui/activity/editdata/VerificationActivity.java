@@ -15,7 +15,14 @@ import com.dingzhi.miaohui.util.C;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
-
+/**
+ * 文件名：VerificationActivity.
+ * 版权所有：SRDZ
+ * 创建人：TANXIN
+ * 创建日期:2016/10/13 15:38.
+ * 功能描述: 验证手机
+ * 函数/方法说明:
+ */
 public class VerificationActivity extends BaseActivity  {
 
     @BindView(R.id.toolbar)
@@ -45,7 +52,7 @@ public class VerificationActivity extends BaseActivity  {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
-            case android.R.id.home:
+            case android.R.id.home: //返回
                 if (isFlag) {
                     Intent intent = new Intent();
                     intent.putExtra("phone", phone);
@@ -63,7 +70,7 @@ public class VerificationActivity extends BaseActivity  {
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         switch (requestCode) {
-            case C.REQUEST_CODE_SETPHONE:
+            case C.REQUEST_CODE_SETPHONE: //新手机号码回调
                 if (resultCode == RESULT_OK) {
                     phone = data.getExtras().getString("tv_phone");
                     isFlag = true;
@@ -75,6 +82,7 @@ public class VerificationActivity extends BaseActivity  {
 
     @OnClick(R.id.btn_next)
     public void onClick() {
+        //跳转至设置手机
         Intent intent = new Intent(this, SetPhoneActivity.class);
         startActivityForResult(intent, C.REQUEST_CODE_SETPHONE);
     }

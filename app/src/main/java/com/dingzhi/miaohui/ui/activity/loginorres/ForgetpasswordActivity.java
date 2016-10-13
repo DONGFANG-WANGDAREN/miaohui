@@ -15,6 +15,14 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
+/**
+ * 文件名：ForgetpasswordActivity.
+ * 版权所有：SRDZ
+ * 创建人：TANXIN
+ * 创建日期:2016/10/13 14:54.
+ * 功能描述: 忘记密码
+ * 函数/方法说明:
+ */
 public class ForgetpasswordActivity extends BaseActivity{
 
     @BindView(R.id.toolbar)
@@ -32,11 +40,17 @@ public class ForgetpasswordActivity extends BaseActivity{
     protected void initView() {
         toolbar.setTitle("忘记密码");
         setSupportActionBar(toolbar);
+        //添加返回键
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
 
 
-
+     /**
+       * 函数名：  onOptionsItemSelected
+       * 创建人： TanXin.
+       * 创建日期： 2016/10/13 14:55.
+       * 功能描述：toolbar返回键
+       */
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
@@ -46,6 +60,7 @@ public class ForgetpasswordActivity extends BaseActivity{
         }
         return true;
     }
+
 
     @OnClick(R.id.btn_next)
     public void onClick() {

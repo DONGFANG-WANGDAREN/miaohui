@@ -6,15 +6,21 @@ import java.util.Calendar;
 import java.util.Date;
 
 /**
- * Created by SRDZ on 2016/8/31.
+ * 文件名：TimeUtil.
+ * 版权所有：SRDZ
+ * 创建人：TANXIN
+ * 创建日期:2016/10/13 17:15.
+ * 功能描述:TimeUtil
+ * 函数/方法说明:
  */
 public class TimeUtil {
 
-    /**
-    *Description:获取当前日期 <br>
-    *@auther TX <br>
-    *created at 2016/8/31 18:16
-    */
+     /**
+       * 函数名： getDateNow
+       * 创建人： TanXin.
+       * 创建日期： 2016/10/13 17:15.
+       * 功能描述：获取当前日期
+      * */
     public static String getDateNow(){
         Date date1 = new Date();
         SimpleDateFormat af = new SimpleDateFormat("yyyy-MM-dd");
@@ -23,6 +29,12 @@ public class TimeUtil {
         return datenow;
     }
 
+     /**
+       * 函数名： getAge
+       * 创建人： TanXin.
+       * 创建日期： 2016/10/13 17:15.
+       * 功能描述：根据日期算出现在年龄
+       */
     public static int getAge(Date birthDay) throws Exception {
         //获取当前系统时间
         Calendar cal = Calendar.getInstance();
@@ -58,7 +70,11 @@ public class TimeUtil {
     }
 
 
-    //String 转Date
+     /**
+       * 函数名：StringToDate
+       * 创建人： TanXin.
+       * 创建日期： 2016/10/13 17:16.
+       * 功能描述：String 转Date */
     public static Date StringToDate (String string){
         Date date = new Date();
         //注意format的格式要与日期String的格式相匹配

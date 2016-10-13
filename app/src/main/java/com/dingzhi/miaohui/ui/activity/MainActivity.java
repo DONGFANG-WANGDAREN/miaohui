@@ -16,7 +16,14 @@ import com.dingzhi.miaohui.util.PreferencesUtil;
 import com.dingzhi.miaohui.widget.TabStripView;
 
 import butterknife.BindView;
-
+/**
+ * 文件名：MainActivity.
+ * 版权所有：SRDZ
+ * 创建人：TANXIN
+ * 创建日期:2016/10/13 14:38.
+ * 功能描述: 主页面
+ * 函数/方法说明:
+ */
 public class MainActivity extends BaseActivity {
 
     @BindView(R.id.navigateTabBar)
@@ -29,6 +36,7 @@ public class MainActivity extends BaseActivity {
     }
 
     protected void initView() {
+        //添加底部按钮
         navigateTabBar.addTab(FindFragment.class, new TabStripView.TabParam(R.mipmap.icon_bottom_find, R.mipmap.icon_bottom_find_select, R.string.bottom_find));
         navigateTabBar.addTab(LikeFragment.class, new TabStripView.TabParam(R.mipmap.icon_bottom_like, R.mipmap.icon_bottom_like_select, R.string.bottom_like));
         navigateTabBar.addTab(MovableFragment.class, new TabStripView.TabParam(R.mipmap.icon_bottom_movable, R.mipmap.icon_bottom_movable_select, R.string.bottom_movable));
@@ -38,8 +46,13 @@ public class MainActivity extends BaseActivity {
 
     }
 
+     /**
+       * 函数名： showGuide
+       * 创建人： TanXin.
+       * 创建日期： 2016/10/13 14:37.
+       * 功能描述：引导页
+       */
     private void showGuide() {
-
         if (PreferencesUtil.getBoolean(MainActivity.this,C.FILE_NAME,"guide_find")){
             return;
         }
@@ -57,7 +70,6 @@ public class MainActivity extends BaseActivity {
                 }
             });
         }
-
         PreferencesUtil.putBoolean(MainActivity.this, C.FILE_NAME,"guide_find",true);
     }
 

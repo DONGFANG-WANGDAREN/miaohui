@@ -24,10 +24,12 @@ import com.jude.easyrecyclerview.decoration.DividerDecoration;
 import butterknife.BindView;
 
 /**
- * Description:收支明细--支出 <br>
- *
- * @auther TX <br>
- * created at 2016/9/8 16:55
+ * 文件名：IncomeChuFragment.
+ * 版权所有：SRDZ
+ * 创建人：TANXIN
+ * 创建日期:2016/10/13 16:32.
+ * 功能描述: 收支明细——支出
+ * 函数/方法说明:
  */
 public class IncomeChuFragment extends BaseFragment implements SwipeRefreshLayout.OnRefreshListener, RecyclerArrayAdapter.OnLoadMoreListener {
     @BindView(R.id.recycle)
@@ -45,6 +47,18 @@ public class IncomeChuFragment extends BaseFragment implements SwipeRefreshLayou
 
     @Override
     protected void initView() {
+        initRrcycle();
+    }
+
+    /**
+     * 函数名： initRcycle
+     * 创建人： TanXin.
+     * 创建日期： 2016/10/13 16:21.
+     * 功能描述：初始化EasyRecycleView
+     * 参考文档：https://github.com/Jude95/EasyRecyclerView
+     * 附加说明：第三方开源库，上拉下拉RecycleView ,initRcycle内方法参考IncomeAllFragment
+     */
+    private void initRrcycle() {
         recycle.setLayoutManager(new LinearLayoutManager(getActivity()));
         DividerDecoration itemDecoration = new DividerDecoration(Color.parseColor("#b3b3b3"), ScreenUtil.dip2px(getActivity(), 0.5f), ScreenUtil.dip2px(getActivity(), 0), 0);
         itemDecoration.setDrawLastItem(false);
@@ -102,11 +116,14 @@ public class IncomeChuFragment extends BaseFragment implements SwipeRefreshLayou
 
         recycle.setRefreshListener(this);
         onRefresh();
-
     }
 
-
-
+    /**
+     * 函数名： onLoadMore
+     * 创建人： TanXin.
+     * 创建日期： 2016/10/13 16:30.
+     * 功能描述：加载更多
+     */
     @Override
     public void onLoadMore() {
         hasNetWork = NetUtil.isConnected(getActivity());
@@ -125,6 +142,12 @@ public class IncomeChuFragment extends BaseFragment implements SwipeRefreshLayou
         }, 1000);
     }
 
+    /**
+     * 函数名： onRefresh
+     * 创建人： TanXin.
+     * 创建日期： 2016/10/13 16:30.
+     * 功能描述：下拉刷新
+     */
     @Override
     public void onRefresh() {
         hasNetWork = NetUtil.isConnected(getActivity());

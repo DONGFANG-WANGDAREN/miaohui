@@ -22,6 +22,14 @@ import java.util.List;
 import butterknife.BindView;
 import butterknife.OnClick;
 
+/**
+ * 文件名：SkillActivity.
+ * 版权所有：SRDZ
+ * 创建人：TANXIN
+ * 创建日期:2016/10/13 16:07.
+ * 功能描述:技能服务
+ * 函数/方法说明:
+ */
 public class SkillActivity extends BaseActivity {
     @BindView(R.id.toolbar)
     Toolbar toolbar;
@@ -59,8 +67,8 @@ public class SkillActivity extends BaseActivity {
         toolbar.setTitle("技能服务");
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        online();
-        theline();
+        onLine();
+        theLine();
     }
 
     @Override
@@ -74,7 +82,7 @@ public class SkillActivity extends BaseActivity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
-            case android.R.id.home:
+            case android.R.id.home: //返回
                 finish();
                 break;
         }
@@ -91,7 +99,13 @@ public class SkillActivity extends BaseActivity {
     }
 
 
-    private void online() {
+     /**
+       * 函数名： online
+       * 创建人： TanXin.
+       * 创建日期： 2016/10/13 16:09.
+       * 功能描述：获取线上技能
+       */
+    private void onLine() {
         onlineList = new ArrayList<>();
         Collections.addAll(onlineList, onlineSkill);
         onlineAdapter = new SkillAdapter(onlineList);
@@ -105,7 +119,13 @@ public class SkillActivity extends BaseActivity {
         });
     }
 
-    private void theline() {
+     /**
+       * 函数名： theline
+       * 创建人： TanXin.
+       * 创建日期： 2016/10/13 16:09.
+       * 功能描述：获取线下技能
+       */
+    private void theLine() {
         thelineList = new ArrayList<>();
         Collections.addAll(thelineList, thelineSkill);
         thelineAdapter = new SkillAdapter(thelineList);

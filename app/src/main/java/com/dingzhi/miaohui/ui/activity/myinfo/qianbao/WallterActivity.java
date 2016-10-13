@@ -17,6 +17,14 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
+/**
+ * 文件名：WallterActivity.
+ * 版权所有：SRDZ
+ * 创建人：TANXIN
+ * 创建日期:2016/10/13 15:56.
+ * 功能描述:钱包
+ * 函数/方法说明:
+ */
 public class WallterActivity extends BaseActivity implements OnClickListener {
 
     @BindView(R.id.toolbar)
@@ -45,7 +53,7 @@ public class WallterActivity extends BaseActivity implements OnClickListener {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
-            case android.R.id.home:
+            case android.R.id.home: //返回
                 finish();
                 break;
         }
@@ -55,13 +63,13 @@ public class WallterActivity extends BaseActivity implements OnClickListener {
     @OnClick({R.id.tv_income, R.id.tv_withdraw, R.id.tv_bind, R.id.tv_setting})
     public void onClick(View view) {
         switch (view.getId()) {
-            case R.id.tv_income:
+            case R.id.tv_income: //跳转现金收支明细
                 startActivity(new Intent(this, IncomeActivity.class));
                 break;
-            case R.id.tv_withdraw:
+            case R.id.tv_withdraw: //跳转提现
                 startActivity(new Intent(this, WithdrawActivity.class));
                 break;
-            case R.id.tv_bind:
+            case R.id.tv_bind: //跳转绑定支付宝或是修改支付宝
                 String alpayaccount = PreferencesUtil.getString(this, C.FILE_NAME, "alpayaccount");
                 String alpayname = PreferencesUtil.getString(this, C.FILE_NAME, "alpayname");
                 if (alpayaccount.isEmpty() && alpayname.isEmpty()) {
@@ -70,7 +78,7 @@ public class WallterActivity extends BaseActivity implements OnClickListener {
                     startActivity(new Intent(this, UpdateAlipayActivity.class));
                 }
                 break;
-            case R.id.tv_setting:
+            case R.id.tv_setting: //跳转设置支付密码或者修改支付密码
                 String paypassword = PreferencesUtil.getString(this, C.FILE_NAME, "paypassword");
                 if (paypassword.isEmpty()) {
                     startActivity(new Intent(this, SetPayPasswordActivity.class));

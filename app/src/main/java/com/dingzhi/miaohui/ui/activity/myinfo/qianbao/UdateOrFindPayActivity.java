@@ -18,10 +18,12 @@ import butterknife.BindView;
 import butterknife.OnClick;
 
 /**
- * Description:修改或找回支付密码 <br>
- *
- * @auther TX <br>
- * created at 2016/9/12 15:34
+ * 文件名：UdateOrFindPayActivity.
+ * 版权所有：SRDZ
+ * 创建人：TANXIN
+ * 创建日期:2016/10/13 15:53.
+ * 功能描述: 修改或者找回密码
+ * 函数/方法说明:
  */
 public class UdateOrFindPayActivity extends BaseActivity  {
 
@@ -52,14 +54,21 @@ public class UdateOrFindPayActivity extends BaseActivity  {
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.tv_update:
-                BeforePassword();
+                BeforePassword(); //掉起支付键盘
                 break;
-            case R.id.tv_find:
+            case R.id.tv_find: //跳转设置支付密码
                 startActivity(new Intent(this,SetPayPasswordActivity.class));
                 break;
         }
     }
 
+     /**
+       * 函数名：BeforePassword
+       * 创建人： TanXin.
+       * 创建日期： 2016/10/13 15:54.
+       * 功能描述：输入原来的密码
+       * 参考文档：https://github.com/zuiwuyuan/WeChatPswKeyboard
+       */
     private void BeforePassword(){
         //原来的密码
         PopEnterPassword popEnterPassword = new PopEnterPassword(this,"请输入原密码");
@@ -80,6 +89,13 @@ public class UdateOrFindPayActivity extends BaseActivity  {
             }
         });
     }
+    /**
+     * 函数名： FirstPassword
+     * 创建人： TanXin.
+     * 创建日期： 2016/10/13 15:51.
+     * 功能描述：第一次调起支付键盘：
+     * 参考文档：https://github.com/zuiwuyuan/WeChatPswKeyboard
+     */
     private void FirstPassword(){
         //第一次输入的密码
         PopEnterPassword popEnterPassword = new PopEnterPassword(this,"请输入密码");
@@ -96,6 +112,13 @@ public class UdateOrFindPayActivity extends BaseActivity  {
         });
     }
 
+    /**
+     * 函数名： SecondPassword
+     * 创建人： TanXin.
+     * 创建日期： 2016/10/13 15:52.
+     * 功能描述：第一次调起支付键盘：
+     * 参考文档：https://github.com/zuiwuyuan/WeChatPswKeyboard
+     */
     private void SecondPassword(final String firstpassword){
         //第二次输入的密码
         PopEnterPassword popEnterPassword = new PopEnterPassword(this,"请再次确认密码");
@@ -122,7 +145,7 @@ public class UdateOrFindPayActivity extends BaseActivity  {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()){
-            case android.R.id.home:
+            case android.R.id.home: //返回
                 finish();
                 break;
         }

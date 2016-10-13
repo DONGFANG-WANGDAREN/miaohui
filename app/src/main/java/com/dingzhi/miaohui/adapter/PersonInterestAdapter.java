@@ -22,7 +22,12 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 
 /**
- * Created by SRDZ on 2016/9/20.
+ * 文件名：PersonInterestAdapter.
+ * 版权所有：SRDZ
+ * 创建人：TANXIN
+ * 创建日期:2016/10/13 17:31.
+ * 功能描述: 个人详情 recycleview adapter
+ * 函数/方法说明:
  */
 public class PersonInterestAdapter extends RecyclerView.Adapter<PersonInterestAdapter.ViewHolder> {
     private Context context;

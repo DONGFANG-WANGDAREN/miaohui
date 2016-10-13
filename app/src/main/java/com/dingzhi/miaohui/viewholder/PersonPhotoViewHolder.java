@@ -8,10 +8,13 @@ import com.bigkoo.convenientbanner.holder.Holder;
 import com.dingzhi.miaohui.util.glideutil.GlideUtils;
 
 /**
-   * explain 个人详情图片滑动
-   * created by TanXin.
-   * created date 2016/9/20 9:09.
-   */
+ * 文件名：PersonPhotoViewHolder.
+ * 版权所有：SRDZ
+ * 创建人：TANXIN
+ * 创建日期:2016/10/13 17:18.
+ * 功能描述: 个人详情头像Banner滑动
+ * 函数/方法说明:
+ */
 public class PersonPhotoViewHolder implements Holder<String>{
     private ImageView imageView;
     @Override

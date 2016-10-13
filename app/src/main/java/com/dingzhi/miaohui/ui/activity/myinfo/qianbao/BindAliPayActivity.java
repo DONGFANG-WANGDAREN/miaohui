@@ -17,6 +17,14 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
+/**
+ * 文件名：BindAliPayActivity.
+ * 版权所有：SRDZ
+ * 创建人：TANXIN
+ * 创建日期:2016/10/13 15:45.
+ * 功能描述: 绑定支付宝
+ * 函数/方法说明:
+ */
 public class BindAliPayActivity extends BaseActivity {
 
     @BindView(R.id.toolbar)
@@ -52,7 +60,7 @@ public class BindAliPayActivity extends BaseActivity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()){
-            case android.R.id.home:
+            case android.R.id.home: //返回
                 finish();
                 break;
         }

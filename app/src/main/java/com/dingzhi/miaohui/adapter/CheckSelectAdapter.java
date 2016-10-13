@@ -16,7 +16,12 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 
 /**
- * Created by SRDZ on 2016/9/20.
+ * 文件名：CheckSelectAdapter.
+ * 版权所有：SRDZ
+ * 创建人：TANXIN
+ * 创建日期:2016/10/13 17:35.
+ * 功能描述: 租他选择技能Adapter
+ * 函数/方法说明:
  */
 public class CheckSelectAdapter extends BaseAdapter {
     private Context context;

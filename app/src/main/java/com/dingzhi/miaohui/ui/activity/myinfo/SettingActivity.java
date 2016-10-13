@@ -15,6 +15,14 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
+/**
+ * 文件名：SettingActivity.
+ * 版权所有：SRDZ
+ * 创建人：TANXIN
+ * 创建日期:2016/10/13 16:06.
+ * 功能描述:设置
+ * 函数/方法说明:
+ */
 public class SettingActivity extends BaseActivity implements View.OnClickListener {
     @BindView(R.id.toolbar)
     Toolbar toolbar;
@@ -40,7 +48,7 @@ public class SettingActivity extends BaseActivity implements View.OnClickListene
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
-            case android.R.id.home:
+            case android.R.id.home: //返回
                 finish();
                 break;
         }
@@ -51,10 +59,10 @@ public class SettingActivity extends BaseActivity implements View.OnClickListene
     @OnClick({R.id.tv_notification, R.id.tv_clear})
     public void onClick(View view) {
         switch (view.getId()) {
-            case R.id.tv_notification:
+            case R.id.tv_notification:  //消息通知
                 startActivity(new Intent(this, NotificationActivity.class));
                 break;
-            case R.id.tv_clear:
+            case R.id.tv_clear:     //清理缓存
                 startActivity(new Intent(this, ClearCacheActivity.class));
                 break;
         }

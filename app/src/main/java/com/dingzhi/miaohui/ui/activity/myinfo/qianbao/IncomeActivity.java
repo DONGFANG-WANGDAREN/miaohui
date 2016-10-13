@@ -20,6 +20,14 @@ import java.util.List;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
+/**
+ * 文件名：IncomeActivity.
+ * 版权所有：SRDZ
+ * 创建人：TANXIN
+ * 创建日期:2016/10/13 15:45.
+ * 功能描述: 现金收支明细
+ * 函数/方法说明:
+ */
 public class IncomeActivity extends BaseActivity {
     @BindView(R.id.toolbar)
     Toolbar toolbar;
@@ -43,9 +51,9 @@ public class IncomeActivity extends BaseActivity {
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         fragments = new ArrayList<>();
-        IncomeAllFragment allFragment = new IncomeAllFragment();
-        IncomeChuFragment chuFragment = new IncomeChuFragment();
-        IncomeRuFragment ruFragment = new IncomeRuFragment();
+        IncomeAllFragment allFragment = new IncomeAllFragment(); //全部
+        IncomeChuFragment chuFragment = new IncomeChuFragment(); //收入
+        IncomeRuFragment ruFragment = new IncomeRuFragment(); //支出
         fragments.add(allFragment);
         fragments.add(ruFragment);
         fragments.add(chuFragment);
@@ -60,7 +68,7 @@ public class IncomeActivity extends BaseActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case android.R.id.home:
-                finish();
+                finish(); //返回
                 break;
         }
         return true;

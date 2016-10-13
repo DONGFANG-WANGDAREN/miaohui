@@ -23,6 +23,7 @@ public abstract class BaseFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         rootView = inflater.inflate(getContentViewId(),container,false);
+        //绑定ButterKnife
         unbinder = ButterKnife.bind(this,rootView);
         this.context = getActivity();
         initView();
@@ -35,6 +36,7 @@ public abstract class BaseFragment extends Fragment {
     @Override
     public void onDestroy() {
         super.onDestroy();
+        //解绑ButterKnife
         unbinder.unbind();
     }
 }

@@ -16,6 +16,14 @@ import com.dingzhi.miaohui.util.glideutil.GlideUtils;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
+/**
+ * 文件名：BaojiaDetailActivity.
+ * 版权所有：SRDZ
+ * 创建人：TANXIN
+ * 创建日期:2016/10/13 16:04.
+ * 功能描述: 报价详情
+ * 函数/方法说明:
+ */
 public class BaojiaDetailActivity extends BaseActivity {
 
     @BindView(R.id.toolbar)
@@ -81,7 +89,7 @@ public class BaojiaDetailActivity extends BaseActivity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
-            case android.R.id.home:
+            case android.R.id.home: //返回
                 finish();
                 break;
         }

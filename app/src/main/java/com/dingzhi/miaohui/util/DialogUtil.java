@@ -9,15 +9,21 @@ import android.widget.TextView;
 import java.util.Calendar;
 
 /**
- * Created by SRDZ on 2016/9/5.
+ * 文件名：DialogUtil.
+ * 版权所有：SRDZ
+ * 创建人：TANXIN
+ * 创建日期:2016/10/13 17:09.
+ * 功能描述: DialogUtil
+ * 函数/方法说明:
  */
 public class DialogUtil {
 
     /**
-    *Description:选择日期 <br>
-    *@auther TX <br>
-    *created at 2016/9/5 14:59
-    */
+      * 函数名： showDialogDate
+      * 创建人： TanXin.
+      * 创建日期： 2016/10/13 17:09.
+      * 功能描述：选择日期 */
+
     public static void showDialogDate(final TextView timeText, Context context) {
         final StringBuffer time = new StringBuffer();
         //获取Calendar对象，用于获取当前时间

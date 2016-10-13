@@ -45,10 +45,13 @@ import butterknife.ButterKnife;
 import butterknife.OnClick;
 
  /**
-   * explain 个人详情界面
-   * created by TanXin.
-   * created date 2016/9/21 15:35.
-   */
+  * 文件名：PersonDetailActivity.
+  * 版权所有：SRDZ
+  * 创建人：TANXIN
+  * 创建日期:2016/10/13 16:16.
+  * 功能描述: 个人详情
+  * 函数/方法说明:
+  */
 public class PersonDetailActivity extends BaseActivity {
     @BindView(R.id.toolbar)
     Toolbar toolbar;
@@ -165,7 +168,7 @@ public class PersonDetailActivity extends BaseActivity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
-            case android.R.id.home:
+            case android.R.id.home: //返回
                 finish();
                 break;
         }
@@ -175,16 +178,22 @@ public class PersonDetailActivity extends BaseActivity {
     @OnClick({R.id.btn_zuta, R.id.btn_baojia})
     public void onClick(View view) {
         switch (view.getId()) {
-            case R.id.btn_zuta:
+            case R.id.btn_zuta: //跳转至订单详情
                 startActivity(new Intent(this,ConfirmOrderActivity.class));
                 break;
             case R.id.btn_baojia:
-                showBaoJia();
+                showBaoJia(); //开启报价对话框
                 break;
         }
     }
 
 
+      /**
+        * 函数名： showBaoJia
+        * 创建人： TanXin.
+        * 创建日期： 2016/10/13 16:17.
+        * 功能描述：报价对话框
+        */
      public void showBaoJia(){
          dialog = new Dialog(PersonDetailActivity.this,R.style.MyDialog);
          dialog.setCancelable(false);

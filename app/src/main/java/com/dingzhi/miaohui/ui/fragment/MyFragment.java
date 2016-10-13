@@ -28,7 +28,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * A simple {@link Fragment} subclass.
+ * 文件名：MyFragment.
+ * 版权所有：SRDZ
+ * 创建人：TANXIN
+ * 创建日期:2016/10/13 16:57.
+ * 功能描述: 我的界面
+ * 函数/方法说明:
  */
 public class MyFragment extends Fragment implements View.OnClickListener{
 
@@ -112,7 +117,7 @@ public class MyFragment extends Fragment implements View.OnClickListener{
     @Override
     public void onClick(View v) {
         switch (v.getId()){
-            case R.id.lay_edit:
+            case R.id.lay_edit: //跳转至编辑
                 startActivity(new Intent(getActivity(), EditDataActivity.class));
                 break;
         }

@@ -18,9 +18,14 @@ import android.renderscript.Element;
 import android.renderscript.RenderScript;
 import android.renderscript.ScriptIntrinsicBlur;
 import android.support.annotation.FloatRange;
-
 /**
- * 高斯模糊处理*/
+ * 文件名：BlurTransformation.
+ * 版权所有：SRDZ
+ * 创建人：TANXIN
+ * 创建日期:2016/10/13 16:59.
+ * 功能描述: glide图片高斯模糊处理
+ * 函数/方法说明:
+ */
 public class BlurTransformation extends BitmapTransformation {
 
 	private static final String ID = "org.ligboy.glide.BlurTransformation";

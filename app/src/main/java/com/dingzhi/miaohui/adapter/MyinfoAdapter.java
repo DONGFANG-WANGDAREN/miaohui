@@ -14,7 +14,12 @@ import com.dingzhi.miaohui.enity.MyInfoEnity;
 import java.util.List;
 
 /**
- * Created by SRDZ on 2016/9/6.
+ * 文件名：MyinfoAdapter.
+ * 版权所有：SRDZ
+ * 创建人：TANXIN
+ * 创建日期:2016/10/13 17:48.
+ * 功能描述: 我的信息 列表 adapter
+ * 函数/方法说明:
  */
 public class MyinfoAdapter extends BaseAdapter{
     private Context context;

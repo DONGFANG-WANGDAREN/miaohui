@@ -24,10 +24,13 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
  /**
-   * explain 确认订单界面
-   * created by TanXin.
-   * created date 2016/9/21 15:35.
-   */
+  * 文件名：ConfirmOrderActivity.
+  * 版权所有：SRDZ
+  * 创建人：TANXIN
+  * 创建日期:2016/10/13 16:13.
+  * 功能描述:确认订单
+  * 函数/方法说明:
+  */
 public class ConfirmOrderActivity extends BaseActivity {
 
     @BindView(R.id.toolbar)
@@ -67,6 +70,12 @@ public class ConfirmOrderActivity extends BaseActivity {
 
     }
 
+      /**
+        * 函数名： setSkill
+        * 创建人： TanXin.
+        * 创建日期： 2016/10/13 16:13.
+        * 功能描述：初始化技能
+        */
     private void setSkill() {
         onlineList = new ArrayList<>();
         onlineList.add("陪玩陪聊");
@@ -128,6 +137,13 @@ public class ConfirmOrderActivity extends BaseActivity {
         });
     }
 
+
+      /**
+        * 函数名： setTime
+        * 创建人： TanXin.
+        * 创建日期： 2016/10/13 16:14.
+        * 功能描述：初始化时间
+        */
     private void setTime() {
         timelist = new ArrayList<>();
         timelist.add("2小时");

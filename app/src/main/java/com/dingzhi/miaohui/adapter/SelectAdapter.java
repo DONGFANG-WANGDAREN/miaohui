@@ -12,9 +12,14 @@ import com.dingzhi.miaohui.R;
 import com.dingzhi.miaohui.widget.DragSelectRecyclerViewAdapter;
 
 import java.util.List;
-
 /**
- * Created by SRDZ on 2016/9/6.
+ * 文件名：SelectAdapter.
+ * 版权所有：SRDZ
+ * 创建人：TANXIN
+ * 创建日期:2016/10/13 17:29.
+ * 功能描述: 地区，行业选择多选recycle adapter
+ * 参考资料：https://github.com/afollestad/drag-select-recyclerview
+ * 函数/方法说明:
  */
 public class SelectAdapter extends DragSelectRecyclerViewAdapter<SelectAdapter.SelectViewHolder> {
     private final ClickListener mCallback;

@@ -16,10 +16,12 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 
 /**
- * Description:绑定微信 <br>
- *
- * @auther TX <br>
- * created at 2016/9/5 10:14
+ * 文件名：WeiXinActivity.
+ * 版权所有：SRDZ
+ * 创建人：TANXIN
+ * 创建日期:2016/10/13 15:35.
+ * 功能描述:
+ * 函数/方法说明:
  */
 public class WeiXinActivity extends BaseActivity {
 
@@ -47,14 +49,16 @@ public class WeiXinActivity extends BaseActivity {
     }
 
 
+     /**
+       * 函数名：onCreateOptionsMenu
+       * 创建人： TanXin.
+       * 创建日期： 2016/10/13 15:37.
+       * 功能描述：菜单显示完成按钮
+       */
     @Override
-
     public boolean onCreateOptionsMenu(Menu menu) {
-
         MenuInflater menuInflater = getMenuInflater();
-
         menuInflater.inflate(R.menu.menu_complete, menu);
-
         return super.onCreateOptionsMenu(menu);
 
     }
@@ -62,13 +66,13 @@ public class WeiXinActivity extends BaseActivity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
-            case android.R.id.home:
+            case android.R.id.home: //返回
                 finish();
                 break;
-            case R.id.action_complete:
+            case R.id.action_complete: //完成
                 String tv = edWeixin.getText().toString().trim();
                 if (tv.isEmpty()) {
-                    Toast.makeText(WeiXinActivity.this, "请输入" + title, Toast.LENGTH_SHORT).show();
+                  Toast.makeText(WeiXinActivity.this, "请输入" + title, Toast.LENGTH_SHORT).show();
                 } else {
                     Intent intent = new Intent();
                     intent.putExtra("tv", tv);

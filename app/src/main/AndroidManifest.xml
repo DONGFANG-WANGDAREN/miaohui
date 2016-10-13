@@ -10,7 +10,6 @@
     <uses-permission android:name="android.permission.GET_TASKS" />
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
     <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
     <uses-permission android:name="android.permission.READ_CONTACTS" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
@@ -79,7 +78,7 @@
 
         <!-- 头像裁剪选择 -->
         <activity
-            android:name=".util.SelectPicActivity"
+            android:name=".ui.activity.loginorres.SelectPicActivity"
             android:screenOrientation="portrait"
             android:theme="@style/DialogStyleBottom" />
         <!-- UCrop库注册 -->

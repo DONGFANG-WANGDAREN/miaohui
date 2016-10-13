@@ -1,4 +1,4 @@
-package com.dingzhi.miaohui.util;
+package com.dingzhi.miaohui.ui.activity.loginorres;
 
 import android.Manifest;
 import android.annotation.SuppressLint;
@@ -38,10 +38,13 @@ import com.yalantis.ucrop.UCrop;
 import java.io.File;
 
 /**
-*Description:头像上传 <br>
-*@auther TX <br>
-*created at 2016/9/14 18:03
-*/
+ * 文件名：SelectPicActivity.
+ * 版权所有：SRDZ
+ * 创建人：TANXIN
+ * 创建日期:2016/10/13 17:14.
+ * 功能描述: 头像上传
+ * 函数/方法说明:
+ */
 public class SelectPicActivity extends Activity implements OnClickListener {
 	protected static final int REQUEST_STORAGE_READ_ACCESS_PERMISSION = 101;
 	protected static final int REQUEST_STORAGE_WRITE_ACCESS_PERMISSION = 102;

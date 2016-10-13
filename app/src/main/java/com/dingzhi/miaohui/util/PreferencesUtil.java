@@ -3,6 +3,14 @@ package com.dingzhi.miaohui.util;
 import android.content.Context;
 import android.content.SharedPreferences;
 
+/**
+ * 文件名：PreferencesUtil.
+ * 版权所有：SRDZ
+ * 创建人：TANXIN
+ * 创建日期:2016/10/13 17:12.
+ * 功能描述: SharedPreferencesUtil
+ * 函数/方法说明:
+ */
 public class PreferencesUtil {
 	public static SharedPreferences sharedPreferences = null;
 	public static SharedPreferences.Editor editor = null;

@@ -18,6 +18,14 @@ import com.dingzhi.miaohui.widget.weixin_keyboard.PopEnterPassword;
 import butterknife.BindView;
 import butterknife.OnClick;
 
+/**
+ * 文件名：WithdrawActivity.
+ * 版权所有：SRDZ
+ * 创建人：TANXIN
+ * 创建日期:2016/10/13 15:58.
+ * 功能描述: 提现
+ * 函数/方法说明:
+ */
 public class WithdrawActivity extends BaseActivity  {
 
     @BindView(R.id.toolbar)
@@ -48,14 +56,20 @@ public class WithdrawActivity extends BaseActivity  {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
-            case android.R.id.home:
+            case android.R.id.home: //返回
                 finish();
                 break;
         }
         return true;
     }
 
-
+    /**
+     * 函数名： FirstPassword
+     * 创建人： TanXin.
+     * 创建日期： 2016/10/13 15:51.
+     * 功能描述：第一次调起支付键盘：
+     * 参考文档：https://github.com/zuiwuyuan/WeChatPswKeyboard
+     */
     private void FirstPassword(String money) {
         //第一次输入的密码
         PopEnterPassword popEnterPassword = new PopEnterPassword(this, "请输入支付密码", "零钱提现", "￥" + money);

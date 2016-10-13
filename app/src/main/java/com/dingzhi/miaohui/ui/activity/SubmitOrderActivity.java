@@ -18,10 +18,13 @@ import butterknife.BindView;
 import butterknife.OnClick;
 
  /**
-   * explain 提交订单界面
-   * created by TanXin.
-   * created date 2016/9/21 15:35.
-   */
+  * 文件名：SubmitOrderActivity.
+  * 版权所有：SRDZ
+  * 创建人：TANXIN
+  * 创建日期:2016/10/13 16:18.
+  * 功能描述: 提交订单界面
+  * 函数/方法说明:
+  */
 public class SubmitOrderActivity extends BaseActivity {
     @BindView(R.id.toolbar)
     Toolbar toolbar;
@@ -77,7 +80,7 @@ public class SubmitOrderActivity extends BaseActivity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
-            case android.R.id.home:
+            case android.R.id.home: //返回
                 finish();
                 break;
         }
@@ -87,6 +90,7 @@ public class SubmitOrderActivity extends BaseActivity {
 
     @OnClick(R.id.btn_sure)
     public void onClick() {
+        //跳转订单详情
         startActivity(new Intent(this, OrderDetailActivity.class));
     }
 }
