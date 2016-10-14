@@ -4,6 +4,14 @@ import android.util.AttributeSet;
 import android.view.ViewGroup;
 import android.widget.GridView;
 
+/**
+ * 文件名：ExpandableHeightGridView.
+ * 版权所有：SRDZ
+ * 创建人：TANXIN
+ * 创建日期:2016/10/13 18:00.
+ * 功能描述: 技能选择多选
+ * 函数/方法说明:
+ */
 public class ExpandableHeightGridView extends GridView {
 
 	private boolean expanded = false;

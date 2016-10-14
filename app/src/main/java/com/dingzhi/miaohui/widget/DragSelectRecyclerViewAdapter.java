@@ -7,8 +7,13 @@ import android.support.v7.widget.RecyclerView;
 import java.util.ArrayList;
 
 /**
- * @author Aidan Follestad (afollestad)
- * 多选recycleview
+ * 文件名：DragSelectRecyclerViewAdapter.
+ * 版权所有：SRDZ
+ * 创建人：TANXIN
+ * 创建日期:2016/10/13 17:59.
+ * 功能描述: 多选recycleview
+ * 参考资料：https://github.com/afollestad/drag-select-recyclerview
+ * 函数/方法说明:
  */
 public abstract class DragSelectRecyclerViewAdapter<VH extends RecyclerView.ViewHolder> extends RecyclerView.Adapter<VH> {
 

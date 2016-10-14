@@ -10,9 +10,14 @@ import android.util.AttributeSet;
 import android.widget.LinearLayout;
 
 import com.dingzhi.miaohui.R;
-
 /**
- * 简易带有时间轴的linearlayout
+ * 文件名：UnderLineLinearLayout.
+ * 版权所有：SRDZ
+ * 创建人：TANXIN
+ * 创建日期:2016/10/14 9:26.
+ * 功能描述:简易带有时间轴的linearlayout
+ * 参考资料：https://github.com/razerdp/UnderLineLinearLayout
+ * 函数/方法说明:
  */
 public class UnderLineLinearLayout extends LinearLayout {
     //=============================================================line gravity常量定义

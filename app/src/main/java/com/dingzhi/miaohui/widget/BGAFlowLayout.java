@@ -13,9 +13,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * 作者:王浩 邮件:bingoogolapple@gmail.com
- * 创建时间:15/6/24 11:21
- * 描述:流式布局
+ * 文件名：BGAFlowLayout.
+ * 版权所有：SRDZ
+ * 创建人：TANXIN
+ * 创建日期:2016/10/13 17:58.
+ * 功能描述: 流式布局
+ * 参考资料：https://github.com/bingoogolapple/BGAFlowLayout-Android
+ * 函数/方法说明:
  */
 public class BGAFlowLayout extends ViewGroup {
     private List<Row> mRows = new ArrayList<>();

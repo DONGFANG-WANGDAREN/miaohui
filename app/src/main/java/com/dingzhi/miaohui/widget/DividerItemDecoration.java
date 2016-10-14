@@ -11,8 +11,14 @@ import android.support.v7.widget.RecyclerView.ItemDecoration;
 import android.util.Log;
 import android.view.View;
 /**
- * recycleview使用listview的分割线
- * */
+ * 文件名：DividerItemDecoration.
+ * 版权所有：SRDZ
+ * 创建人：TANXIN
+ * 创建日期:2016/10/13 17:58.
+ * 功能描述: recycleview 分割线
+ * 参考资料：http://blog.csdn.net/lmj623565791/article/details/45059587
+ * 函数/方法说明:
+ */
 public class DividerItemDecoration extends ItemDecoration {
 	private static final int[] ATTRS = new int[] { android.R.attr.listDivider };
 
